@@ -1,0 +1,135 @@
+.card {
+  flex: 1 0 25%;
+  min-width: 260px;
+  max-width: 280px;
+  height: 710px;
+  background: #060d2c;
+  margin: 5px;
+  margin-top: 50px;
+  padding: 26px 15px 30px;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 90px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+
+  img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid white;
+  }
+  h2 {
+    margin: 24px 0 0px;
+    letter-spacing: 1px;
+    line-height: 20px;
+  }
+  h5 {
+    color: $color-3;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  h4 {
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    margin-top: -4px;
+
+    span {
+      font-size: 0.7rem;
+    }
+  }
+  ul {
+    margin: 6px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  li {
+    background: #212040;
+    border-radius: 18px;
+    padding: 0px 7px;
+    margin: 0 4px 4px 0;
+    font-size: 1.1rem;
+
+    &:first-child {
+      margin-left: -4px;
+    }
+  }
+  h3 {
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+    margin-top: 10px;
+  }
+  p {
+    color: $color-3;
+    font-size: 1.3rem;
+    line-height: 20px;
+    height: 70px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .imgModale{
+    height: 90%;
+    width: auto;
+    object-fit: contain;
+    border: 5px solid white;
+    position: relative;
+    margin-top: 50px;
+    z-index: 100;
+    transform: translate(0%,0%);
+  }
+  @media screen and (max-width: 768px) {
+    .imgModale{
+      height: 50%;
+      width: auto;
+      object-fit: contain;
+      border: 5px solid white;
+      position: relative;
+     margin-top: 50px;
+      z-index: 100;
+      margin-top: 70%;
+      transform: translate(0%,0%);
+    }
+}
+  .btn, .btn2, .btn3 {
+    background: transparent;
+    position: absolute;
+    bottom: 16px;
+    left: 5%;
+    width: 0px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 50;
+    
+    &:hover {
+      color: #546fe4;
+      
+    }
+  }
+  .btn2 {
+    left: 20%;
+  }
+  .btn3 {
+    left: 85%;
+  }
+  .downPost {
+    color: white;
+    &:hover {
+      color:#546fe4;
+    }
+  }
+  
+}
